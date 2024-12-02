@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Burger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- barra de menú fija -->
+  <header class="menu-bar">
+    <img src="./img/bigburger.png" alt="Logo" class="menu-logo">
+    <nav class="menu-options">
+      <a href="./index.html">INICIO</a>
+      <a href="./menu.html">MENU</a>
+      <a href="#promociones">PROMOCIONES</a>
+      <a href="#encuentranos">ENCUENTRANOS</a>
+      <a href="./login.html">INICIAR SESION</a>
+    </nav>
+    <div class="menu-button">
+        <img src="./img/shopw.png" alt="Botón Menú">
+    </div>
+  </header>
+
+  <!-- cuerpo de la página -->
+  <main class="main-content">
+    <section class="grid-container">
+      <div class="grid-wrapper2">
+        <div class="login-form itm-pag">
+            <h2>INGRESA O CREA TU CUENTA</h2>
+            
+            <form action="#" method="POST">
+              <label for="email">Correo electrónico *</label>
+              <input type="text" id="email" name="email" placeholder="Introduce tu correo" required>
+        
+              <label for="password">Contraseña *</label>
+              <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
+        
+              <button type="submit">INGRESAR</button>
+              <button type="button" onclick="window.location.href='#'">CREAR CUENTA</button>
+            </form>
+        
+            <a href="#">Recuperar Clave</a>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- pie de página -->
+  <footer class="footer">
+    <div class="footer-left">
+      <a href="#contactanos">Contáctanos</a>
+      <a href="#atencion-cliente">Atención al Cliente</a>
+      <a href="#reclamaciones">Libro de Reclamaciones</a>
+      <a href="#privacidad">Aviso de Privacidad</a>
+    </div>
+    <div class="footer-right">
+        <img src="./img/facebook.png" alt="Facebook">
+        <img src="./img/instagram.png" alt="Instagram">
+        <img src="./img/whatsapp.png" alt="Twitter">
+      </div>
+  </footer>
+
+</body>
+</html>

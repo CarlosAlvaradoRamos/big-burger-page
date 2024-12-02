@@ -1,0 +1,424 @@
+:root {
+    --unit-width: 16.6666vw; /* 1/6 del ancho de la pantalla */
+    --unit-height: 300px; /* altura base de una unidad */
+  }
+  
+  /* general */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDB45E;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+/* barra de menú */
+.menu-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #804000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    z-index: 1000;
+  }
+ 
+  .menu-logo {
+    height: 80px;
+  }
+  
+  .menu-options {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .menu-options a {
+    color: white;
+    padding-inline: 5px;
+  }
+  
+  .menu-button img {
+    height: 30px; /* Ajusta el tamaño de la imagen del botón */
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-right:  50PX;
+  }
+  
+  .menu-button img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+  }
+  
+  /* cuerpo de la página */
+  .main-content {
+    padding-top: 120px;
+  }
+  
+  .itm-pag {
+    background-color: #ffe9c9;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    height: 65px;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  .action-buttons button {
+    padding: 10px 20px;
+    background-color: #ae0000e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    min-width: 200px;
+  }
+
+  .action-buttons button:hover {
+    background-color: #555;
+  }
+  
+  /* grid */
+  .grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* Considerar el header y footer */
+    padding: 20px;
+  }
+  
+  .grid-wrapper {
+    display: grid;
+    grid-template-areas: 
+      "large small-top"
+      "large small-bottom"
+      "wide wide";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr) 1fr;
+    gap: 20px;
+    overflow: hidden;
+  }
+
+  .grid-wrapper img{
+        width: 100%;
+        height: auto; /* Mantiene la proporción de la imagen */
+        max-width: 100%; /* La imagen no excederá el tamaño del contenedor */
+        max-height: 100%; /* La imagen no excederá la altura del contenedor */
+        object-fit: cover; /* Opcional: mantiene la imagen cubriendo el contenedor */    
+  }
+  
+  .div-large {
+    grid-area: large;
+    width: calc(3 * var(--unit-width));
+    height: calc((2 * var(--unit-height)) + 20px);
+  }
+  
+  .div-small-top {
+    grid-area: small-top;
+    width: var(--unit-width);
+    height: var(--unit-height);
+  }
+  
+  .div-small-bottom {
+    grid-area: small-bottom;
+    width: var(--unit-width);
+    height: var(--unit-height);
+  }
+  
+  .div-wide {
+    grid-area: wide;
+    width: calc((3 * var(--unit-width)) + var(--unit-width) + 20px);
+    height: var(--unit-height);
+  }
+  
+/* pie de página */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #804000;
+    color: white;
+    height: 80px;
+    flex-wrap: wrap;
+  }
+
+  .footer-left{
+    padding-left: 50px;
+  }
+  
+  .footer-left a {
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 10px;
+    padding-right: 50px;
+  }
+  
+  .footer-right img {
+    width: 40px; /* ajusta el tamaño de las imágenes */
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer-right img:hover {
+    transform: scale(1.1); /* efecto de aumento al pasar el mouse */
+  }
+  
+/* estilo del contenedor del formulario */
+.login-form {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Ajustado a un tamaño adecuado */
+    text-align: center;
+  }
+  
+  /* estilo de las etiquetas */
+  .login-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* estilo de los campos de entrada */
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* estilo de los botones */
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ae0000e0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 10px 0;
+  }
+  
+  .login-form button:hover {
+    background-color: #555;
+  }
+  
+  /* estilo de enlaces debajo del formulario */
+  .login-form a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .login-form a:hover {
+    color: #555;
+  }
+
+  /* estilo para el grid-wrapper */
+.grid-wrapper3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  grid-template-rows: repeat(5, 1fr); /* cinco filas */
+  gap: 20px; /* separación entre los divs */
+  padding: 20px;
+  height: 100vh; /* toda la altura de la ventana */
+}
+
+/* estilo para cada celda del grid */
+.grid-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr; /* tres columnas, con las dos primeras a la mitad de la del centro */
+  gap: 10px; /* separación interna entre los divs */
+  background-color: #eec88883;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* estilo para la imagen dentro de la primera columna */
+.grid-item .left img {
+  padding-top: 25px;
+  padding-left: 25px;
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* estilo para el texto dentro de la columna central */
+.grid-item .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* estilo para la imagen tipo botón en la columna derecha */
+.grid-item .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item .right img {
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.grid-item .right img:hover {
+  transform: scale(1.1); /* efecto de aumento al pasar el mouse */
+}
+
+/* Contenedor del menú */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada ítem del menú */
+.menu-item {
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 16px;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.add-button {
+    background-color: #ae0000e0;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+  @media (max-width: 1200px) {
+    .grid-wrapper {
+      grid-template-columns: 2fr 1fr;
+      width: calc((2 * var(--unit-width)) + var(--unit-width) + 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-bar {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .menu-options {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .grid-wrapper {
+      grid-template-areas: 
+        "large"
+        "small-top"
+        "small-bottom"
+        "wide";
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .action-buttons button {
+      width: 100%;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .footer-right {
+      align-self: center;
+    }
+  }
+  
